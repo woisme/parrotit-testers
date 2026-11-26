@@ -96,6 +96,12 @@ class Browser:
             )
         self.browser = getattr(pw, self.engine).launch(headless=True)
         self.context = self.browser.new_context(**opts)
+        if env.get("APPCHECK_DEBUG_TOKEN"):
+            # Firebase App Check debug token, set before the app starts and only on the site under test.
+            self.context.add_init_script(
+                f"if (location.hostname === {json.dumps(self.home)})"
+                f" self.FIREBASE_APPCHECK_DEBUG_TOKEN = {json.dumps(env['APPCHECK_DEBUG_TOKEN'])};"
+            )
         if self.hosts:
             blocked = lambda url: host_blocked(url, self.hosts)  # noqa: E731
             self.context.route(blocked, self._block)

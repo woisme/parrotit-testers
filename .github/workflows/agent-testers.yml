@@ -505,6 +505,7 @@ jobs:
           LOCALE: ${{ matrix.locale }}
           GEO: ${{ matrix.geo }}
           WEB_URL: ${{ inputs.web_url }}
+          APPCHECK_DEBUG_TOKEN: ${{ secrets.APPCHECK_DEBUG_TOKEN }}   # ParrotIt's Firebase App Check pass
           BRIEF: ${{ inputs.bug_report != '' && inputs.brief == 'AGENT_BRIEF.md' && 'briefs/reproduce.md' || inputs.brief }}
           MODEL: ${{ inputs.model }}
           LLM_BASE_URL: ${{ inputs.llm_base_url }}
