@@ -1,0 +1,51 @@
+{
+  "mode": "map",
+  "robot": true,
+  "issues": [],
+  "screens_found": [
+    {
+      "name": "Cunning Mushroom",
+      "screens": [
+        "01"
+      ],
+      "path": "(launch)"
+    },
+    {
+      "name": "Selection",
+      "screens": [
+        "02"
+      ],
+      "path": "Cunning Mushroom"
+    },
+    {
+      "name": "Selection\nFiles: 1\nSize: 0 B",
+      "screens": [
+        "14"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Apps (APK)",
+      "screens": [
+        "03",
+        "04",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Exclude system apps",
+      "screens": [
+        "05"
+      ],
+      "path": "Cunning Mushroom > Selection > Apps (APK)"
+    }
+  ]
+}

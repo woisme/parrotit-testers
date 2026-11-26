@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="54" viewBox="0 0 340 54">
+  <rect x="0.5" y="0.5" width="339" height="53" rx="10" fill="#4F46E5" stroke="#4F46E5"/>
+  <g transform="translate(11 12)">
+    <rect width="31" height="31" rx="5" fill="#FFFFFF"/>
+    <path d="M22.6 10.1a8.6 8.6 0 1 0 1.5 7.6" fill="none" stroke="#4F46E5" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M24.9 5.6v6.2h-6.2z" fill="#4F46E5"/>
+    <path d="M13.3 11.6v7.8l6.4-3.9z" fill="#4F46E5"/>
+  </g>
+  <text x="53" y="20" font-family="Helvetica-Bold, Helvetica, Arial, sans-serif" font-size="9" font-weight="bold" fill="#E0E7FF">NEXT: EVERY BUG BECOMES A FREE TEST</text>
+  <text x="52" y="40" font-family="Helvetica-Bold, Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="#FFFFFF">Explore-Compile-Replay</text>
+  <path d="M313 19l8 8-8 8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

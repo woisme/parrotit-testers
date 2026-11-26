@@ -1,0 +1,117 @@
+{
+  "mode": "map",
+  "robot": true,
+  "issues": [],
+  "screens_found": [
+    {
+      "name": "Cunning Mushroom",
+      "screens": [
+        "01",
+        "27",
+        "28",
+        "30",
+        "32",
+        "34",
+        "35"
+      ],
+      "path": "(launch)"
+    },
+    {
+      "name": "Selection",
+      "screens": [
+        "02",
+        "04",
+        "06",
+        "08",
+        "11",
+        "13",
+        "16",
+        "17",
+        "20",
+        "22",
+        "24",
+        "26"
+      ],
+      "path": "Cunning Mushroom"
+    },
+    {
+      "name": "Empty list",
+      "screens": [
+        "05"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Selection\nFiles: 1\nSize: 0 B",
+      "screens": [
+        "07"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Type message",
+      "screens": [
+        "09",
+        "10"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Apps (APK)",
+      "screens": [
+        "14",
+        "15"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Add to selection",
+      "screens": [
+        "18"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Favorites",
+      "screens": [
+        "21"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Single recipient",
+      "screens": [
+        "23"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Troubleshoot",
+      "screens": [
+        "25"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "System",
+      "screens": [
+        "29"
+      ],
+      "path": "Cunning Mushroom"
+    },
+    {
+      "name": "LocalSend",
+      "screens": [
+        "31"
+      ],
+      "path": "Cunning Mushroom"
+    },
+    {
+      "name": "Language",
+      "screens": [
+        "33"
+      ],
+      "path": "Cunning Mushroom"
+    }
+  ]
+}

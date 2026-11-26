@@ -1,0 +1,50 @@
+{
+  "score": 6,
+  "issues": [
+    {
+      "title": "Icon-only buttons have no accessible name and are under 48 dp",
+      "severity": "minor",
+      "screen": "Home/Send/Settings",
+      "screens": [
+        "01",
+        "02",
+        "04",
+        "05",
+        "06"
+      ]
+    },
+    {
+      "title": "Settings 'Save to folder' value '(Downloads)' wraps leaving a lone ')' at font x1.3",
+      "severity": "minor",
+      "screen": "Settings",
+      "screens": [
+        "06"
+      ]
+    },
+    {
+      "title": "Send tab hint text cut off by the bottom bar",
+      "severity": "minor",
+      "screen": "Send",
+      "screens": [
+        "02"
+      ]
+    },
+    {
+      "title": "Nearby devices placeholders with no searching/empty text",
+      "severity": "minor",
+      "screen": "Send",
+      "screens": [
+        "02",
+        "04"
+      ]
+    },
+    {
+      "title": "Text item in Selection shows only a generic icon, no preview",
+      "severity": "cosmetic",
+      "screen": "Send",
+      "screens": [
+        "04"
+      ]
+    }
+  ]
+}

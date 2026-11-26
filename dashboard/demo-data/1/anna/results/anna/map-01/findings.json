@@ -1,0 +1,30 @@
+{
+  "mode": "map",
+  "robot": true,
+  "issues": [],
+  "screens_found": [
+    {
+      "name": "Cunning Mushroom",
+      "screens": [
+        "01",
+        "03",
+        "04"
+      ],
+      "path": "(launch)"
+    },
+    {
+      "name": "History",
+      "screens": [
+        "02"
+      ],
+      "path": "Cunning Mushroom"
+    },
+    {
+      "name": "Screen 3",
+      "screens": [
+        "05"
+      ],
+      "path": "Cunning Mushroom"
+    }
+  ]
+}

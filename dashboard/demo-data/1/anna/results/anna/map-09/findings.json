@@ -1,0 +1,50 @@
+{
+  "mode": "map",
+  "robot": true,
+  "issues": [],
+  "screens_found": [
+    {
+      "name": "Cunning Mushroom",
+      "screens": [
+        "01"
+      ],
+      "path": "(launch)"
+    },
+    {
+      "name": "Selection",
+      "screens": [
+        "02"
+      ],
+      "path": "Cunning Mushroom"
+    },
+    {
+      "name": "Empty list",
+      "screens": [
+        "07"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Selection\nFiles: 1\nSize: 0 B",
+      "screens": [
+        "03",
+        "05"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Add to selection",
+      "screens": [
+        "06"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Selection (16)",
+      "screens": [
+        "04"
+      ],
+      "path": "Cunning Mushroom > Selection > Selection\nFiles: 1\nSize: 0 B"
+    }
+  ]
+}

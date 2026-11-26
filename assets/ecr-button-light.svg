@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="54" viewBox="0 0 320 54">
+  <rect x="0.5" y="0.5" width="319" height="53" rx="10" fill="#FFFFFF" stroke="#18181B"/>
+  <g transform="translate(11 12)">
+    <rect width="31" height="31" rx="5" fill="#18181B"/>
+    <g transform="translate(-4.3 -2.7) scale(0.38)">
+      <circle cx="24" cy="48" r="7.8" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+      <rect x="39.6" y="39.6" width="16.8" height="16.8" rx="3.6" fill="#FFFFFF"/>
+      <path d="M66.6 37.9v20.2a1.9 1.9 0 0 0 2.9 1.7l16.8-10.1a1.9 1.9 0 0 0 0-3.4l-16.8-10.1a1.9 1.9 0 0 0-2.9 1.7z" fill="#2EA043"/>
+    </g>
+  </g>
+  <text x="53" y="20" font-family="Helvetica-Bold, Helvetica, Arial, sans-serif" font-size="9" font-weight="bold" fill="#18181B">EVERY BUG BECOMES A TEST</text>
+  <text x="52" y="40" font-family="Helvetica-Bold, Helvetica, Arial, sans-serif" font-size="21" font-weight="bold" fill="#18181B">Explore-Compile-Replay</text>
+</svg>

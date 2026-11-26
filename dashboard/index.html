@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>App map</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo" aria-hidden="true"></span>
+    <div class="brand-text">
+      <strong id="app-name">App map</strong>
+      <span class="run" id="run-name"></span>
+    </div>
+  </div>
+  <button id="help" class="ghost" aria-haspopup="dialog">How to read this map</button>
+  <a class="demo-note" id="demo-note" hidden href="https://github.com/pierridotite/mobile-agent-testers" target="_blank" rel="noopener">Run it on your app</a>
+  <div class="actions">
+    <button id="undo" class="icon" title="Undo (Ctrl+Z)" aria-label="Undo">↶</button>
+    <button id="redo" class="icon" title="Redo (Ctrl+Shift+Z)" aria-label="Redo">↷</button>
+    <span class="status" id="status" aria-live="polite"></span>
+    <button id="save" class="primary" title="Save the checks to trace.json and the comments to trace.notes.json (Ctrl+S)">Save</button>
+  </div>
+</header>
+
+<section class="map" id="map">
+  <div class="map-canvas" id="map-canvas">
+    <div class="map-world" id="map-world"></div>
+    <div class="map-tools">
+      <div class="testers" id="map-testers" role="group" aria-label="Testers: click one to follow its path"></div>
+      <div class="tool-row">
+        <label class="select">Heat map
+          <select id="map-heat" aria-label="Heat map">
+            <option value="taps">Real taps</option>
+            <option value="both">Taps and estimate</option>
+            <option value="estimated">Estimate only</option>
+            <option value="off">Off</option>
+          </select>
+        </label>
+        <label class="select">Device <select id="map-device" aria-label="Show the screens and taps of one device"></select></label>
+        <button id="map-fit" title="Show the whole map">Fit</button>
+        <button id="map-zoom-in" class="icon" title="Zoom in" aria-label="Zoom in">+</button>
+        <button id="map-zoom-out" class="icon" title="Zoom out" aria-label="Zoom out">−</button>
+      </div>
+    </div>
+    <div class="map-legend" aria-label="Legend">
+      <span><i class="lg-lane"></i>A tester's path</span>
+      <span><i class="lg-dash"></i>Only the robot went there</span>
+      <span><i class="lg-card"></i>No tester reached it</span>
+      <span><i class="lg-heat"></i>Where fingers land</span>
+    </div>
+  </div>
+  <aside class="panel map-side" id="map-side"></aside>
+</section>
+
+<div class="help" id="help-box" role="dialog" aria-modal="true" aria-labelledby="help-title" hidden>
+  <div class="help-card">
+    <h2 id="help-title">How to read this map</h2>
+    <ol>
+      <li><b>Each card is a screen of the app.</b> The same screen in another language, text size or device is one card.</li>
+      <li><b>Each colored line is a tester</b>, an AI persona with its own phone, language and goal. Follow it from <i>Launch</i> to see where the tester went. Click a name at the top left to show only its path.</li>
+      <li><b>Gray dashed lines</b> are screens only the robot opened: it taps every button once, with no model, so the map shows every screen, also those no tester found.</li>
+      <li><b>The heat map</b> on a screen shows where fingers landed, or where they are likely to land.</li>
+      <li><b>Click a card</b> to see its screenshots, the findings seen there, and to turn a finding into a check that each replay of the path verifies.</li>
+    </ol>
+    <p class="hint">Each path is a trace that replays with no model: Explore, then Compile, then Replay.</p>
+    <button class="primary" id="help-close">Got it</button>
+  </div>
+</div>
+
+<div class="empty-state" id="loading">Loading the run…</div>
+<script src="app.js"></script>
+</body>
+</html>

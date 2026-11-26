@@ -1,0 +1,98 @@
+{
+  "schema": "ecr.trace/0",
+  "id": "anna-20261125T191523",
+  "adapter": {
+    "id": "mobile-maestro"
+  },
+  "persona": {
+    "id": "anna",
+    "profile": "Retired teacher, 68, low patience with jargon, uses large text.",
+    "goal": "Create an account and set up her first item without help.",
+    "locale": "en-GB",
+    "context": {
+      "platform": "android",
+      "device": "Small phone, Android 11",
+      "fontScale": 1.3,
+      "theme": "light"
+    }
+  },
+  "params": [],
+  "invariants": [],
+  "steps": [
+    {
+      "id": "s1",
+      "action": {
+        "kind": "launchApp",
+        "appId": "org.localsend.localsend_app.debug",
+        "clearState": true
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "s2",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "point": "78%,10%"
+        }
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "01",
+        "point": [
+          840,
+          192
+        ],
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    },
+    {
+      "id": "s3",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Open folder"
+        }
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "02",
+        "point": [
+          274,
+          372
+        ],
+        "bounds": [
+          45,
+          300,
+          504,
+          444
+        ],
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    },
+    {
+      "id": "s4",
+      "action": {
+        "kind": "pressKey",
+        "key": "Back"
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "03"
+      }
+    }
+  ],
+  "evidence": {
+    "lastScreen": "04"
+  },
+  "provenance": {
+    "exploredAt": "2026-11-25T19:15:23Z",
+    "agent": "mobile-agent-testers"
+  }
+}

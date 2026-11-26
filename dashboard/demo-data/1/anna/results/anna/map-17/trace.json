@@ -1,0 +1,131 @@
+{
+  "schema": "ecr.trace/0",
+  "id": "anna-20261125T191524",
+  "adapter": {
+    "id": "mobile-maestro"
+  },
+  "persona": {
+    "id": "anna",
+    "profile": "Retired teacher, 68, low patience with jargon, uses large text.",
+    "goal": "Create an account and set up her first item without help.",
+    "locale": "en-GB",
+    "context": {
+      "platform": "android",
+      "device": "Small phone, Android 11",
+      "fontScale": 1.3,
+      "theme": "light"
+    }
+  },
+  "params": [],
+  "invariants": [],
+  "steps": [
+    {
+      "id": "s1",
+      "action": {
+        "kind": "launchApp",
+        "appId": "org.localsend.localsend_app.debug",
+        "clearState": true
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "s2",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Send Tab 2 of 3"
+        }
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "01",
+        "point": [
+          540,
+          1656
+        ],
+        "bounds": [
+          360,
+          1536,
+          720,
+          1776
+        ],
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    },
+    {
+      "id": "s3",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Manual sending"
+        }
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "02",
+        "point": [
+          689,
+          782
+        ],
+        "bounds": [
+          629,
+          722,
+          749,
+          842
+        ],
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    },
+    {
+      "id": "s4",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Folder"
+        }
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "03",
+        "point": [
+          540,
+          1618
+        ],
+        "bounds": [
+          405,
+          1521,
+          675,
+          1716
+        ],
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    },
+    {
+      "id": "s5",
+      "action": {
+        "kind": "pressKey",
+        "key": "Back"
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "04"
+      }
+    }
+  ],
+  "evidence": {
+    "lastScreen": "05"
+  },
+  "provenance": {
+    "exploredAt": "2026-11-25T19:15:24Z",
+    "agent": "mobile-agent-testers"
+  }
+}

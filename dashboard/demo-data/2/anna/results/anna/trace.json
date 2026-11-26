@@ -1,0 +1,203 @@
+{
+  "schema": "ecr.trace/0",
+  "id": "anna-20261125T191145",
+  "adapter": {
+    "id": "mobile-maestro"
+  },
+  "persona": {
+    "id": "anna",
+    "profile": "Retired teacher, 68, low patience with jargon, uses large text.",
+    "goal": "Create an account and set up her first item without help.",
+    "locale": "en-GB",
+    "context": {
+      "platform": "android",
+      "device": "Small phone, Android 11",
+      "fontScale": 1.3,
+      "theme": "light"
+    }
+  },
+  "params": [
+    {
+      "name": "TEXT_1",
+      "secret": true,
+      "description": "A text the agent typed"
+    }
+  ],
+  "invariants": [],
+  "steps": [
+    {
+      "id": "s1",
+      "action": {
+        "kind": "launchApp",
+        "appId": "org.localsend.localsend_app.debug",
+        "clearState": true
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "s2",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Send Tab 2 of 3"
+        }
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "01",
+        "point": [
+          540,
+          1656
+        ],
+        "bounds": [
+          360,
+          1536,
+          720,
+          1776
+        ],
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    },
+    {
+      "id": "s3",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Text"
+        },
+        "at": "97%,90%"
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "02",
+        "point": [
+          200,
+          577
+        ],
+        "bounds": [
+          45,
+          480,
+          355,
+          675
+        ],
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    },
+    {
+      "id": "s4",
+      "action": {
+        "kind": "eraseText"
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "03"
+      }
+    },
+    {
+      "id": "s5",
+      "action": {
+        "kind": "inputText",
+        "text": {
+          "param": "TEXT_1"
+        }
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "03"
+      }
+    },
+    {
+      "id": "s6",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Confirm"
+        }
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "03",
+        "point": [
+          740,
+          737
+        ],
+        "bounds": [
+          593,
+          665,
+          888,
+          809
+        ],
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    },
+    {
+      "id": "s7",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Settings Tab 3 of 3"
+        }
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "04",
+        "point": [
+          900,
+          1656
+        ],
+        "bounds": [
+          720,
+          1536,
+          1080,
+          1776
+        ],
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    },
+    {
+      "id": "s8",
+      "action": {
+        "kind": "swipe",
+        "direction": "UP",
+        "from": "50%,68%",
+        "to": "50%,21%"
+      },
+      "checkpoints": [],
+      "evidence": {
+        "screen": "05",
+        "from": [
+          540,
+          1300
+        ],
+        "to": [
+          540,
+          400
+        ],
+        "size": [
+          1080,
+          1920
+        ]
+      }
+    }
+  ],
+  "evidence": {
+    "lastScreen": "06"
+  },
+  "provenance": {
+    "exploredAt": "2026-11-25T19:11:45Z",
+    "agent": "mobile-agent-testers",
+    "model": "claude-sonnet-5-5"
+  }
+}

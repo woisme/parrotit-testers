@@ -1,0 +1,35 @@
+{
+  "mode": "map",
+  "robot": true,
+  "issues": [],
+  "screens_found": [
+    {
+      "name": "Cunning Mushroom",
+      "screens": [
+        "01"
+      ],
+      "path": "(launch)"
+    },
+    {
+      "name": "Selection",
+      "screens": [
+        "02"
+      ],
+      "path": "Cunning Mushroom"
+    },
+    {
+      "name": "Add to selection",
+      "screens": [
+        "04"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    },
+    {
+      "name": "Single recipient",
+      "screens": [
+        "03"
+      ],
+      "path": "Cunning Mushroom > Selection"
+    }
+  ]
+}

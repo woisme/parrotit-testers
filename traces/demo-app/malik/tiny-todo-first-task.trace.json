@@ -1,0 +1,216 @@
+{
+  "schema": "ecr.trace/0",
+  "id": "tiny-todo-first-task",
+  "adapter": {
+    "id": "mobile-maestro"
+  },
+  "persona": {
+    "id": "anna",
+    "profile": "Retired teacher, 68, low patience with jargon.",
+    "goal": "Create her account and add a first task.",
+    "locale": "en-GB",
+    "context": {
+      "platform": "android"
+    }
+  },
+  "params": [
+    {
+      "name": "NAME",
+      "secret": false,
+      "description": "Her first name"
+    },
+    {
+      "name": "EMAIL",
+      "secret": false,
+      "description": "Email of the test account"
+    },
+    {
+      "name": "PASSWORD",
+      "secret": true,
+      "description": "Password of the test account, 8 characters or more"
+    }
+  ],
+  "invariants": [
+    {
+      "id": "no-vague-error",
+      "check": {
+        "kind": "notVisible",
+        "target": {
+          "text": "Something went wrong"
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "open",
+      "intent": "She opens the app for the first time.",
+      "action": {
+        "kind": "launchApp",
+        "appId": "com.example.tinytodo",
+        "clearState": true
+      },
+      "checkpoints": [
+        {
+          "id": "sign-up-shown",
+          "check": {
+            "kind": "visible",
+            "target": {
+              "text": "Create your account"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "name-field",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Name"
+        }
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "name",
+      "action": {
+        "kind": "inputText",
+        "text": {
+          "param": "NAME"
+        }
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "email-field",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Email"
+        }
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "email",
+      "action": {
+        "kind": "inputText",
+        "text": {
+          "param": "EMAIL"
+        }
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "password-field",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Password"
+        }
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "password",
+      "action": {
+        "kind": "inputText",
+        "text": {
+          "param": "PASSWORD"
+        }
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "keyboard",
+      "intent": "The keyboard may cover the button, so she closes it.",
+      "action": {
+        "kind": "hideKeyboard"
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "continue",
+      "intent": "She sends the form.",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Continue"
+        }
+      },
+      "checkpoints": [
+        {
+          "id": "four-tasks",
+          "check": {
+            "kind": "visible",
+            "target": {
+              "text": "4 tasks"
+            }
+          }
+        },
+        {
+          "id": "first-task-listed",
+          "check": {
+            "kind": "visible",
+            "target": {
+              "text": "Buy apples"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "task-field",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "New task"
+        }
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "task",
+      "action": {
+        "kind": "inputText",
+        "text": "Buy milk"
+      },
+      "checkpoints": []
+    },
+    {
+      "id": "add",
+      "intent": "She adds the task.",
+      "action": {
+        "kind": "tapOn",
+        "target": {
+          "text": "Add"
+        }
+      },
+      "checkpoints": [
+        {
+          "id": "task-listed",
+          "check": {
+            "kind": "visible",
+            "target": {
+              "text": "Buy milk"
+            }
+          }
+        },
+        {
+          "id": "five-tasks",
+          "check": {
+            "kind": "visible",
+            "target": {
+              "text": "5 tasks"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "exploredAt": "2026-11-25T14:00:00.000Z",
+    "agent": "written by hand from the source of the demo app"
+  }
+}
